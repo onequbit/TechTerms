@@ -1,5 +1,5 @@
 
-def loadfromcsv(filename, row_method):
+def loadfromcsv(filename: str, row_method: callable):
     import csv    
     data = []
     with open(filename,encoding='utf-8') as csv_file:
