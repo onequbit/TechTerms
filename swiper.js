@@ -28,15 +28,15 @@ function handleTouchMove(evt) {
 
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
         if ( xDiff > 0 ) {
-            /* left swipe */ 
+            document.dispatchEvent(new Event('swipeLeft'));
         } else {
-            /* right swipe */
+            document.dispatchEvent(new Event('swipeRight'));
         }                       
     } else {
         if ( yDiff > 0 ) {
-            /* up swipe */ 
+            document.dispatchEvent(new Event('swipeUp'));
         } else { 
-            /* down swipe */
+            document.dispatchEvent(new Event('swipeDown'));
         }                                                                 
     }
     /* reset values */
